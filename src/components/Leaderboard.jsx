@@ -20,7 +20,7 @@ export default function Leaderboard()
 
         const getLeaderboardData = async () => {
             try {
-              const response = await fetch(`http://localhost:3000/${selectedGameId}/leaderboard`);
+              const response = await fetch(`https://waldo-clone-d1cae75d0e6b.herokuapp.com/${selectedGameId}/leaderboard`);
       
               if (!response.ok) {
                 throw new Error("Failed to get leaderboard.");

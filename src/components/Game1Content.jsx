@@ -55,7 +55,7 @@ export default function Game1Content({ gameID }) {
   useEffect(() => {
     const fetchCharacters = async () => {
       try {
-        const response = await fetch(`http://localhost:3000/game/${selectedCharacterInfo.gameId}/characters`);
+        const response = await fetch(`https://waldo-clone-d1cae75d0e6b.herokuapp.com/game/${selectedCharacterInfo.gameId}/characters`);
 
         if (!response.ok) {
           throw new Error("Failed to get characters.");
@@ -182,7 +182,7 @@ export default function Game1Content({ gameID }) {
     ) {
       const fetchData = async () => {
         try {
-          const response = await fetch("http://localhost:3000/validate", {
+          const response = await fetch("https://waldo-clone-d1cae75d0e6b.herokuapp.com/validate", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -225,7 +225,7 @@ export default function Game1Content({ gameID }) {
   const handleLeaderboardSubmit = async () => {
     try {
   
-      const response = await fetch("http://localhost:3000/leaderboard", {
+      const response = await fetch("https://waldo-clone-d1cae75d0e6b.herokuapp.com/leaderboard", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
