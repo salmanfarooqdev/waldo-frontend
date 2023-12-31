@@ -1,4 +1,5 @@
 import { useLayoutEffect, useState } from "react";
+import { useNavigate } from 'react-router-dom';
 import { useRef } from "react";
 import { useEffect } from "react";
 import games from "../games";
@@ -27,6 +28,8 @@ export default function Game1Content({ gameID }) {
   const [showCircle, setShowCircle] = useState(false);
   const [circleX, setCircleX] = useState(0);
   const [circleY, setCircleY] = useState(0);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     let timer;
@@ -238,7 +241,7 @@ export default function Game1Content({ gameID }) {
       });
 
  
-      window.location.href = '/leaderboard';
+      navigate('/leaderboard');
 
     } catch (error) {
         console.error("Error fetching data:", error.message);
